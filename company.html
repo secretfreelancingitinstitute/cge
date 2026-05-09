@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Company Profile — JELLWOW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <a href="/index.html" class="brand-link"><img src="/assets/logo.svg" alt="JELLWOW" class="logo"></a>
+        <nav class="main-nav">
+          <a href="/index.html">Home</a>
+          <a href="/jobs.html">All Jobs</a>
+          <a href="/companies.html">Companies</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Toggle theme" class="theme-toggle">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero small">
+      <h1 id="companyTitle">Company Profile</h1>
+      <p class="lead">Company overview, trust score, verification status and open positions.</p>
+    </section>
+    <section class="container company-page">
+      <div id="companyProfile"></div>
+      <div id="companyJobs" class="job-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <a href="/index.html">Back to Home</a>
+  </footer>
+</body>
+</html>

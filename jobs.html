@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>All Jobs — JELLWOW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <a href="/index.html" class="brand-link"><img src="/assets/logo.svg" alt="JELLWOW" class="logo"></a>
+        <nav class="main-nav">
+          <a href="/index.html">Home</a>
+          <a href="/jobs.html">All Jobs</a>
+          <a href="/usa-jobs.html">USA Jobs</a>
+          <a href="/companies.html">Companies</a>
+          <a href="/resume-builder.html">Resume Builder</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Toggle theme" class="theme-toggle">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero small">
+      <h1>All Jobs</h1>
+      <p class="lead">Browse global opportunities — advanced filters, verified employers, and trusted listings.</p>
+    </section>
+    <section class="container filters">
+      <input id="filterKeyword" placeholder="Search by title or company" />
+      <input id="filterLocation" placeholder="City, state or country" />
+      <select id="filterCountry"></select>
+      <select id="filterWorkType">
+        <option value="any">Any Work Type</option>
+        <option value="remote">Remote</option>
+        <option value="hybrid">Hybrid</option>
+        <option value="onsite">Onsite</option>
+      </select>
+      <select id="filterVisa">
+        <option value="any">Any</option>
+        <option value="yes">Visa Sponsorship</option>
+        <option value="no">No Sponsorship</option>
+      </select>
+      <button id="applyFilters">Apply</button>
+    </section>
+
+    <section id="jobsList" class="job-list"></section>
+
+    <div id="pagination" class="pagination"></div>
+  </main>
+
+  <footer class="site-footer container">
+    <a href="/index.html">Back to Home</a>
+  </footer>
+</body>
+</html>

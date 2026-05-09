@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Companies — JELLWOW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <a href="/index.html" class="brand-link"><img src="/assets/logo.svg" alt="JELLWOW" class="logo"></a>
+        <nav class="main-nav">
+          <a href="/index.html">Home</a>
+          <a href="/jobs.html">All Jobs</a>
+          <a href="/usa-jobs.html">USA Jobs</a>
+          <a href="/companies.html">Companies</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Toggle theme" class="theme-toggle">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero small">
+      <h1>Company Directory</h1>
+      <p class="lead">Browse verified companies, view profiles, and explore open roles by country and industry.</p>
+    </section>
+    <section class="filters">
+      <input id="companySearch" placeholder="Search company" />
+      <select id="companyCountry"></select>
+      <select id="companyIndustry">
+        <option value="any">Any Industry</option>
+        <option value="tech">Tech</option>
+        <option value="retail">Retail</option>
+        <option value="logistics">Logistics</option>
+      </select>
+      <button id="applyCompanyFilters">Filter</button>
+    </section>
+
+    <section id="companiesList" class="company-list"></section>
+  </main>
+
+  <footer class="site-footer container">
+    <a href="/index.html">Back to Home</a>
+  </footer>
+</body>
+</html>

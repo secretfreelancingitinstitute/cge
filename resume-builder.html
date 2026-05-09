@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume Builder — JELLWOW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <a href="/index.html" class="brand-link"><img src="/assets/logo.svg" alt="JELLWOW" class="logo"></a>
+        <nav class="main-nav">
+          <a href="/index.html">Home</a>
+          <a href="/jobs.html">All Jobs</a>
+          <a href="/resume-builder.html">Resume Builder</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Toggle theme" class="theme-toggle">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero small">
+      <h1>Resume Builder</h1>
+      <p class="lead">Create professional resumes with templates, preview and download in multiple formats.</p>
+    </section>
+    <section class="container resume-builder">
+      <h2 class="visually-hidden">Resume Builder App</h2>
+      <p>Build, preview, and download professional resumes. Save locally in your browser.</p>
+
+    <section class="resume-form">
+      <input id="rName" placeholder="Full name" />
+      <input id="rTitle" placeholder="Professional title" />
+      <textarea id="rSummary" placeholder="Summary"></textarea>
+      <h3>Experience</h3>
+      <div id="experienceList"></div>
+      <button id="addExperience">Add Experience</button>
+      <h3>Education</h3>
+      <div id="educationList"></div>
+      <button id="addEducation">Add Education</button>
+      <h3>Skills</h3>
+      <input id="newSkill" placeholder="Add a skill and press Enter" />
+
+      <div class="actions">
+        <button id="previewResume" class="btn">Preview</button>
+        <button id="downloadTxt" class="btn">Download TXT</button>
+        <button id="downloadPdf" class="btn">Download PDF</button>
+        <button id="downloadDocx" class="btn">Download DOCX</button>
+      </div>
+    </section>
+
+    <section id="resumePreview" class="resume-preview"></section>
+  </main>
+
+  <footer class="site-footer container">
+    <a href="/index.html">Back to Home</a>
+  </footer>
+</body>
+</html>

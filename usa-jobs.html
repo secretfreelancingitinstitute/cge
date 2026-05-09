@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>USA Jobs — JELLWOW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <a href="/index.html" class="brand-link"><img src="/assets/logo.svg" alt="JELLWOW" class="logo"></a>
+        <nav class="main-nav">
+          <a href="/index.html">Home</a>
+          <a href="/jobs.html">All Jobs</a>
+          <a href="/usa-jobs.html">USA Jobs</a>
+          <a href="/companies.html">Companies</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Toggle theme" class="theme-toggle">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero small">
+      <h1>USA Jobs</h1>
+      <p class="lead">Browse USA-only opportunities — filter by state, city, salary, and visa sponsorship.</p>
+    </section>
+    <section class="filters">
+      <select id="usaState"></select>
+      <input id="usaCity" placeholder="City" />
+      <select id="usaVisa">
+        <option value="any">Any Sponsorship</option>
+        <option value="yes">Visa Sponsorship</option>
+        <option value="no">No Sponsorship</option>
+      </select>
+      <input type="range" id="usaSalary" min="0" max="300000" step="1000" />
+      <button id="applyUsaFilters">Apply</button>
+    </section>
+
+    <section id="usaJobsList" class="job-list"></section>
+    <div id="usaPagination" class="pagination"></div>
+  </main>
+
+  <footer class="site-footer container">
+    <a href="/index.html">Back to Home</a>
+  </footer>
+</body>
+</html>
